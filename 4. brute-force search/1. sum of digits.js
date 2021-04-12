@@ -42,3 +42,19 @@ function solution(arr) {
   return answer;
 }
 
+function solution(arr) {
+  let answer, max = Number.MIN_SAFE_INTEGER;
+  for (let x of arr) {
+    let sum = x.toString().split('').reduce((acc, cur) => acc + Number(cur), 0);
+    if (sum > max) {
+      max = sum;
+      answer = x;
+    } else if (sum === max) {
+      if (x > answer) {
+        answer = x;
+      }
+    }
+  }
+  return answer;
+}
+// 숫자를 문자열로 쪼갠 후 reduce로 합산하는 방식
