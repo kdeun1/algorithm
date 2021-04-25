@@ -5,12 +5,12 @@ function solution(arr) {
 
   rowSum = 0;
   for (let i = 0; i < cnt; i++) {
-    rowSum = Math.max(...arr[i]);
+    rowSum = arr[i].reduce((acc, cur) => acc += cur);
     if (maxSum < rowSum) maxSum = rowSum;
   }
 
-  rowSum = 0;
   for (let i = 0; i < cnt; i++) {
+    rowSum = 0;
     for (let j = 0; j < cnt; j++) {
       rowSum += arr[j][i];
     }

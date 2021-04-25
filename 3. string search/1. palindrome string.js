@@ -1,8 +1,8 @@
 function solution(str) {
   let result = 'NO';
-  const reverseStr = [...str].reverse().join('');
+  const reverseStr = [...str].toUpperCase().reverse().join('');
   // const reverseStr = str.split('').reverse().join('');
-  if (str.toUpperCase() === reverseStr.toUpperCase()) {
+  if (str === reverseStr) {
     result = 'YES';
   }
   return result;

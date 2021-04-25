@@ -1,6 +1,6 @@
 function solution(arr) {
   let result = [];
-  let sortedArr = [...arr].sort().reverse();
+  let sortedArr = [...arr].sort((a, b) => b - a);
   for (score of arr) {
     result.push(sortedArr.indexOf(score) + 1);
   }

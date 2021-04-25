@@ -1,6 +1,6 @@
 function solution(str) {
   let result = 'YES';
-  const onlyLowerCharStr = str.replace(/[^a-zA-Z]/g, '').toLowerCase();
+  const onlyLowerCharStr = str.toLowerCase().replace(/[^a-z]/g, '');
   const reverseLowerStr = onlyLowerCharStr.split('').reverse().join('');
   if (onlyLowerCharStr !== reverseLowerStr) {
     result = 'NO';

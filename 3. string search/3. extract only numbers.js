@@ -1,5 +1,7 @@
 function solution(str) {
-  return Number(str.replace(/[a-zA-Z]/g, ''));
+  // return Number(str.replace(/[a-zA-Z]/g, ''));
+  // return Number(str.replace(/[^0-9]/g, ''));
+  return Number(str.replace(/[^\d]/g, ''));
 }
 
 function solution(str) {
