@@ -1,17 +1,12 @@
 function solution(n, arr) {
-  let answer = 0, sum = 0, left = 0;
+  let answer = 0, left = 0, sum = 0;
   for (let right = 0; right < arr.length; right++) {
     sum += arr[right];
-    if (sum === n) {
-      answer++;
-    }
-    while (sum >= n) {
+    while (sum > n) {
       sum -= arr[left];
       left++;
-      if (sum === n) {
-        answer++;
-      }
     }
+    answer += (right - left + 1);
   }
   return answer;
 }
