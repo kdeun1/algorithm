@@ -10,5 +10,5 @@ function solution(arr) {
   return answer;
 }
 
-solution([120, 125, 152, 130, 135, 135, 143, 127, 160]); // 3, 8
+solution([120, 125, 152, 130, 135, 135, 143, 127, 160]); // 3, 8. recursion and DFS
 solution([120, 130, 150, 150, 130, 150]); // 3, 5
